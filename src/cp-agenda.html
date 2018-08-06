@@ -1,0 +1,20 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="cp-agenda">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+  </template>
+
+  <script>
+    class CpAgenda extends Polymer.Element {
+      static get is() { return 'cp-agenda'; }
+    }
+
+    window.customElements.define(CpAgenda.is, CpAgenda);
+  </script>
+</dom-module>

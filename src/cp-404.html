@@ -1,0 +1,30 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="cp-404">
+  <template>
+    <style>
+      :host {
+        display: block;
+
+        padding: 10px 20px;
+      }
+    </style>
+
+    Oops não achei a página, 404. <a href="[[rootPath]]">Voltar para a home</a>
+  </template>
+
+  <script>
+    class Cp404 extends Polymer.Element {
+      static get is() { return 'cp-404'; }
+      static get properties() {
+        return {
+          // This shouldn't be neccessary, but the Analyzer isn't picking up
+          // Polymer.Element#rootPath
+          rootPath: String,
+        };
+      }
+    }
+
+    window.customElements.define(Cp404.is, Cp404);
+  </script>
+</dom-module>
